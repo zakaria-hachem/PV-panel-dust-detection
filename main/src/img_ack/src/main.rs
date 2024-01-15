@@ -39,6 +39,9 @@ fn actuate (val : bool){
        true =>  pin.set_high(),
        false => pin.set_low(), 
     }
+    let MOTOR_RUN_DURATION = 30;
+    thread::sleep(Duration::from_secs(MOTOR_RUN_DURATION));
+    pin.set_low();
 
 }
 
